@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+<style>text{font-family:Inter,ui-sans-serif,system-ui,sans-serif}.title{font-size:28px;font-weight:700;fill:#172033}.sub{font-size:14px;fill:#5b6475}.label{font-size:14px;fill:#253047}.small{font-size:12px;fill:#667085}.value{font-size:18px;font-weight:700;fill:#172033}</style>
+<rect width="960" height="540" fill="#fbfcfe"/>
+<text x="50" y="48" class="title">Kernel-axiom audit</text>
+<text x="50" y="73" class="sub">All 11 audited declarations depended only on Lean’s three standard logical foundations.</text>
+<text x="50" y="165" class="label">Vlassis–Thomas</text>
+<rect x="240" y="140" width="62" height="38" rx="8" fill="#2a9d78"/>
+<text x="312" y="166" class="value">1</text>
+<text x="240" y="202" class="small">propext · Classical.choice · Quot.sound</text>
+<text x="50" y="270" class="label">Grünbaum</text>
+<rect x="240" y="245" width="558" height="38" rx="8" fill="#2a9d78"/>
+<text x="808" y="271" class="value">9</text>
+<text x="240" y="307" class="small">propext · Classical.choice · Quot.sound</text>
+<text x="50" y="375" class="label">Feige final theorem</text>
+<rect x="240" y="350" width="62" height="38" rx="8" fill="#2a9d78"/>
+<text x="312" y="376" class="value">1</text>
+<text x="240" y="412" class="small">propext · Classical.choice · Quot.sound</text>
+<rect x="50" y="450" width="860" height="50" rx="10" fill="#eef8f4"/>
+<text x="70" y="481" class="value">0</text>
+<text x="100" y="480" class="label">sorry / admit / sorryAx / project-defined axiom declarations</text>
+</svg>

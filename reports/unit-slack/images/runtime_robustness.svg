@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+<style>text{font-family:Inter,ui-sans-serif,system-ui,sans-serif}.title{font-size:28px;font-weight:700;fill:#172033}.sub{font-size:14px;fill:#5b6475}.label{font-size:14px;fill:#253047}.small{font-size:12px;fill:#667085}.value{font-size:18px;font-weight:700;fill:#172033}</style>
+<rect width="960" height="540" fill="#fbfcfe"/>
+<text x="50" y="48" class="title">Build-time robustness</text>
+<text x="50" y="73" class="sub">Identical code and command, measured once as the cluster drained and once under the 16-job submission wave.</text>
+<line x1="110" y1="450.0" x2="900" y2="450.0" stroke="#e5e9f0"/>
+<text x="98" y="454.0" text-anchor="end" class="small">0</text>
+<line x1="110" y1="390.0" x2="900" y2="390.0" stroke="#e5e9f0"/>
+<text x="98" y="394.0" text-anchor="end" class="small">50</text>
+<line x1="110" y1="330.0" x2="900" y2="330.0" stroke="#e5e9f0"/>
+<text x="98" y="334.0" text-anchor="end" class="small">100</text>
+<line x1="110" y1="270.0" x2="900" y2="270.0" stroke="#e5e9f0"/>
+<text x="98" y="274.0" text-anchor="end" class="small">150</text>
+<line x1="110" y1="210.0" x2="900" y2="210.0" stroke="#e5e9f0"/>
+<text x="98" y="214.0" text-anchor="end" class="small">200</text>
+<line x1="110" y1="150.0" x2="900" y2="150.0" stroke="#e5e9f0"/>
+<text x="98" y="154.0" text-anchor="end" class="small">250</text>
+<rect x="142" y="380.4" width="42" height="69.6" rx="5" fill="#2057a6"/>
+<text x="163" y="372.4" text-anchor="middle" class="small">58s</text>
+<rect x="192" y="153.60000000000002" width="42" height="296.4" rx="5" fill="#e06c47"/>
+<text x="213" y="145.60000000000002" text-anchor="middle" class="small">247s</text>
+<text x="188" y="480" text-anchor="middle" class="small">Vlassis</text>
+<rect x="322" y="427.2" width="42" height="22.8" rx="5" fill="#2057a6"/>
+<text x="343" y="419.2" text-anchor="middle" class="small">19s</text>
+<rect x="372" y="324.0" width="42" height="126.0" rx="5" fill="#e06c47"/>
+<text x="393" y="316.0" text-anchor="middle" class="small">105s</text>
+<text x="368" y="480" text-anchor="middle" class="small">Grünbaum</text>
+<rect x="502" y="426.0" width="42" height="24.0" rx="5" fill="#2057a6"/>
+<text x="523" y="418.0" text-anchor="middle" class="small">20s</text>
+<rect x="552" y="244.8" width="42" height="205.2" rx="5" fill="#e06c47"/>
+<text x="573" y="236.8" text-anchor="middle" class="small">171s</text>
+<text x="548" y="480" text-anchor="middle" class="small">Feige</text>
+<rect x="682" y="445.2" width="42" height="4.8" rx="5" fill="#2057a6"/>
+<text x="703" y="437.2" text-anchor="middle" class="small">4s</text>
+<rect x="732" y="427.2" width="42" height="22.8" rx="5" fill="#e06c47"/>
+<text x="753" y="419.2" text-anchor="middle" class="small">19s</text>
+<text x="728" y="480" text-anchor="middle" class="small">Combined</text>
+<rect x="615" y="85" width="14" height="14" fill="#2057a6"/><text x="637" y="97" class="small">fast repeat</text>
+<rect x="745" y="85" width="14" height="14" fill="#e06c47"/><text x="767" y="97" class="small">saturated repeat</text>
+<text x="25" y="280" transform="rotate(-90 25 280)" text-anchor="middle" class="label">seconds</text>
+</svg>

@@ -1,0 +1,7 @@
+name,cache_get_seconds,build_vlassis_seconds,build_grunbaum_seconds,build_feige_seconds,build_all_seconds,total_seconds
+Vlassis–Thomas isolated,72.0,57.0,,,,141.0
+Grünbaum isolated,67.0,,21.0,,,96.0
+Feige isolated,63.0,,,71.0,,145.0
+Combined clean build,60.0,,,,70.0,147.0
+"Full replication, fast",68.0,58.0,19.0,20.0,4.0,184.0
+"Full replication, saturated",67.0,247.0,105.0,171.0,19.0,717.0

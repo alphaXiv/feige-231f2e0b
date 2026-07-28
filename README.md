@@ -1,3 +1,49 @@
+# Reproduction: sharp unit-slack small-deviation bound
+
+**Assessment: reproduced.** We tested the central fixed-dimensional claim from
+[*Sharp Small-Deviation Inequalities for Sums of Independent Nonnegative Random
+Variables* (arXiv:2607.23980)](https://arxiv.org/abs/2607.23980): for every
+positive finite \(n\), the lower bound is \((n/(n+1))^n\), and this constant is
+optimal. The pinned public Lean source built all three proof blocks separately
+and together; all 11 kernel audits used only Lean’s standard foundations; exact
+arithmetic matched the paper for every \(n=1,\ldots,512\). Eight seeded
+simulations (2.4 million trials) had mean absolute error 0.00237 from the exact
+probabilities.
+
+This is the full formal unit-slack claim, not a downscaled theorem. The only
+scope substitution is that the paper’s general positive-\(\delta\) result was
+not tested; Monte Carlo is secondary to the exact and kernel-checked evidence.
+All runs used Kubernetes on NVIDIA RTX PRO 6000 Blackwell GPUs, with a measured
+peak of 14 concurrent GPUs and 994 seconds (0.276 hours) actual wall time.
+
+- [Detailed illustrated report](reports/unit-slack/report.md)
+- [Self-contained marimo notebook](notebooks/unit_slack_reproduction.py)
+- [Static evidence data](reports/unit-slack/data/summary.json)
+
+[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/alphaXiv/feige-231f2e0b/blob/main/notebooks/unit_slack_reproduction.py)
+
+Exact Molab URL:
+https://molab.marimo.io/github/alphaXiv/feige-231f2e0b/blob/main/notebooks/unit_slack_reproduction.py
+
+## Experiment log
+
+`main` is presentation-only: **Not run as an experiment (publication surface)**.
+The formal runs all used the exact command shown below, inherited unchanged
+through the experiment tree.
+
+| Branch / experiment | Purpose | Exact run command | Assessment / outcome | Compute |
+|---|---|---|---|---|
+| [`orx/lean-source-hole-scan`](https://github.com/alphaXiv/feige-231f2e0b/tree/orx/lean-source-hole-scan) | Pin commit/tree; scan 98 Lean files | `bash reproduction/run.sh` | Passed; 0 forbidden tokens | Kubernetes, RTX PRO 6000 Blackwell, 1 GPU |
+| [`orx/vlassis-thomas-isolated-build`](https://github.com/alphaXiv/feige-231f2e0b/tree/orx/vlassis-thomas-isolated-build) | Build and audit exact calibration | `bash reproduction/run.sh` | Passed; standard foundations only | Kubernetes, RTX PRO 6000 Blackwell, 1 GPU |
+| [`orx/grunbaum-isolated-build`](https://github.com/alphaXiv/feige-231f2e0b/tree/orx/grunbaum-isolated-build) | Build and audit geometry | `bash reproduction/run.sh` | Passed; 9 declarations audited | Kubernetes, RTX PRO 6000 Blackwell, 1 GPU |
+| [`orx/feige-isolated-build`](https://github.com/alphaXiv/feige-231f2e0b/tree/orx/feige-isolated-build) | Build final theorem and sharpness | `bash reproduction/run.sh` | Passed; final theorem audit clean | Kubernetes, RTX PRO 6000 Blackwell, 1 GPU |
+| [`orx/combined-default-build`](https://github.com/alphaXiv/feige-231f2e0b/tree/orx/combined-default-build) | Build all default targets together | `bash reproduction/run.sh` | Passed in 147 harness seconds | Kubernetes, RTX PRO 6000 Blackwell, 1 GPU |
+| [`orx/full-proof-chain-replication-b`](https://github.com/alphaXiv/feige-231f2e0b/tree/orx/full-proof-chain-replication-b) | Complete clean-clone protocol | `bash reproduction/run.sh` | Reproduced in 184 harness seconds | Kubernetes, RTX PRO 6000 Blackwell, 1 GPU |
+| [`orx/full-proof-chain-replication-a`](https://github.com/alphaXiv/feige-231f2e0b/tree/orx/full-proof-chain-replication-a) | Saturated-concurrency repeat | `bash reproduction/run.sh` | Reproduced in 717 harness seconds | Kubernetes, RTX PRO 6000 Blackwell, 1 GPU |
+| [`orx/sharpness-seed-11`](https://github.com/alphaXiv/feige-231f2e0b/tree/orx/sharpness-seed-11) and [five seed siblings](https://github.com/alphaXiv/feige-231f2e0b/branches) | Independent sharpness simulations | `bash reproduction/run.sh` | Passed; pooled with two full-run seeds | Kubernetes, RTX PRO 6000 Blackwell, 1 GPU each |
+
+---
+
 # Feige's unit-slack conjecture in Lean
 
 This repository gives a machine-checked Lean formalization of a proof of

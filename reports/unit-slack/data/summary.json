@@ -1,0 +1,38 @@
+{
+  "audited_declarations": 11,
+  "compute": {
+    "backend": "kubernetes",
+    "first_job_created": "2026-07-28T19:28:43Z",
+    "gpu_model": "NVIDIA RTX PRO 6000 Blackwell",
+    "last_job_completed": "2026-07-28T19:45:17Z",
+    "peak_concurrent_gpu_count": 14,
+    "wall_hours": 0.2761111111111111,
+    "wall_seconds": 994
+  },
+  "exact_grid": [
+    1,
+    512
+  ],
+  "exact_grid_sha256": "a6b7756c8ad1cc3e690a2654dd12ffa4a3dc9039951c00ef0bf970aa916a7d84",
+  "forbidden_tokens": 0,
+  "inside_wilson95": 77,
+  "lean_files": 98,
+  "max_absolute_z": 2.5610077677916947,
+  "mean_absolute_error": 0.0023694648617746707,
+  "paper_id": "2607.23980",
+  "pinned_commit": "98ab466e74280ae9d40622c19dc7f24f01b60864",
+  "pinned_tree": "4406b0e9177f06cf24be645e8c54637137f0ab3e",
+  "simulation_points": 80,
+  "simulation_seeds": [
+    11,
+    29,
+    101,
+    1009,
+    2026,
+    271828,
+    314159,
+    8675309
+  ],
+  "simulation_trials": 2400000,
+  "verdict": "reproduced"
+}
