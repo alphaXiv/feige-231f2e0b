@@ -7,3 +7,4 @@
 *.ilean
 *.trace
 /tmp/
+**/__marimo__/
