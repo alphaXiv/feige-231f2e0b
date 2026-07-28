@@ -56,10 +56,9 @@ metric provenance_verified 1
 
 scan_log="$work_dir/source_scan.log"
 set +e
-find "$formal_dir" -path "$formal_dir/.lake" -prune -o -type f -name '*.lean' -print0 |
-  xargs -0 grep -nE \
-    '(^|[^[:alnum:]_])(sorry|admit|sorryAx)([^[:alnum:]_]|$)|^[[:space:]]*axiom[[:space:]]' \
-    >"$scan_log"
+grep -R -nE --include='*.lean' \
+  '(^|[^[:alnum:]_])(sorry|admit|sorryAx)([^[:alnum:]_]|$)|^[[:space:]]*axiom[[:space:]]' \
+  "$formal_dir" >"$scan_log"
 scan_status=$?
 set -e
 if [ "$scan_status" -eq 0 ]; then
