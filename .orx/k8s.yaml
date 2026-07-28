@@ -1,0 +1,24 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: feige-reproduction-{{ORX_RUN}}
+spec:
+  backoffLimit: 0
+  ttlSecondsAfterFinished: 86400
+  activeDeadlineSeconds: 21600
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: reproduce
+          image: pytorch/pytorch:2.6.0-cuda12.4-cudnn9-runtime
+          command: ["bash", "-c", "$ORX_SCRIPT"]
+          resources:
+            requests:
+              nvidia.com/gpu: "1"
+              cpu: "16"
+              memory: "64Gi"
+            limits:
+              nvidia.com/gpu: "1"
+              cpu: "16"
+              memory: "64Gi"
